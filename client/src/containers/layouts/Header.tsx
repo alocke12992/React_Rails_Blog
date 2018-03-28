@@ -70,8 +70,8 @@ class Header extends React.Component<IProps, {}> {
         <div className="container">
           <nav className="navbar is-primary">
             <div className="navbar-brand">
-              <Link className="navbar-item" title="GraphQL rails blog" to="/">
-                GraphQL rails blog
+              <Link className="navbar-item" title="My Blog" to="/">
+                My Blog
               </Link>
             </div>
             <div className="navbar-menu">{this.renderSignInLinks()}</div>

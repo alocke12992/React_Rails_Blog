@@ -13,9 +13,9 @@
   "scripts": {
     "start": "cd client && npm start",
     "build:clean": "rimraf ./public/*",
-    "build": "cd client && npm install && npm run build && cd ..",
-    "deploy": "npm run build:clean && cp -a client/build/. public/",
-    "postinstall": "npm run build && npm run deploy && echo 'Client built!'"
+    "build": "cd client && npm install --only=dev && npm install && npm run build && cd ..",
+    "deploy": "cp -a client/build/. public/",
+    "heroku-postbuild": "npm run build && npm run deploy && echo 'Client Built'"
   },
   "author": "Matthieu Segret <matthieu.segret@gmail.com>",
   "license": "MIT",
@@ -25,5 +25,8 @@
   "homepage": "https://github.com/MatthieuSegret/graphql-rails-blog#readme",
   "devDependencies": {
     "rimraf": "^2.6.2"
+  },
+  "dependencies": {
+    "npm": "^5.8.0"
   }
 }
